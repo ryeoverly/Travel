@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <div class="logo">
+      <h1>HotelBooking</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Rooms</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Welcome to Your Perfect Stay</h2>
+      <p>Find the best deals and rooms for your vacation or business trip!</p>
+    </div>
+  </section>
+
+  <!-- Search Section -->
+  <section class="search">
+    <h3>Book Your Stay</h3>
+    <form id="search-form">
+      <input type="date" id="check-in" placeholder="Check-in Date" required>
+      <input type="date" id="check-out" placeholder="Check-out Date" required>
+      <select id="rooms" required>
+        <option value="">Select Room Type</option>
+        <option value="single">Single Room</option>
+        <option value="double">Double Room</option>
+        <option value="suite">Suite</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 HotelBooking. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
