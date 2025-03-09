@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Hospitality - Car Rentals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Welcome to Our Travel & Hospitality Services</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Car Rentals</a></li>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Your Perfect Ride Awaits!</h2>
+            <p>Book a car and start your journey today.</p>
+        </div>
+    </section>
+
+    <!-- Car Rental Section -->
+    <section class="car-rentals">
+        <div class="container">
+            <h2>Our Fleet</h2>
+            <p>Choose from a wide range of vehicles for your next trip.</p>
+            <div class="car-cards">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Car 1">
+                    <h3>Sedan</h3>
+                    <p>Comfortable and economical for solo or small group trips.</p>
+                    <button>Book Now</button>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Car 2">
+                    <h3>SUV</h3>
+                    <p>Perfect for family trips or off-road adventures.</p>
+                    <button>Book Now</button>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Car 3">
+                    <h3>Convertible</h3>
+                    <p>Experience a thrilling ride with the top down.</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-form">
+        <div class="container">
+            <h2>Book Your Car</h2>
+            <form action="#" method="post">
+                <label for="pickup-location">Pick-up Location:</label>
+                <input type="text" id="pickup-location" name="pickup-location" required>
+
+                <label for="pickup-date">Pick-up Date:</label>
+                <input type="date" id="pickup-date" name="pickup-date" required>
+
+                <label for="dropoff-location">Drop-off Location:</label>
+                <input type="text" id="dropoff-location" name="dropoff-location" required>
+
+                <label for="dropoff-date">Drop-off Date:</label>
+                <input type="date" id="dropoff-date" name="dropoff-date" required>
+
+                <button type="submit">Check Availability</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Travel & Hospitality. All Rights Reserved.</p>
+            <p>Contact us: info@travelhospitality.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>
