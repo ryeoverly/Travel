@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Bliss - Book Your Stay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #1e88e5;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    input, select, button {
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 5px;
+    }
+
+    button {
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      cursor: pointer;
+      grid-column: span 2;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    .room {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .room h3 {
+      margin-top: 0;
+    }
+
+    .room button {
+      margin-top: 10px;
+      background-color: #4caf50;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hotel Bliss</h1>
+  <p>Book your perfect stay with us!</p>
+</header>
+
+<div class="container">
+  <h2>Search for Availability</h2>
+  <form id="searchForm">
+    <div>
+      <label for="checkin">Check-in Date:</label>
+      <input type="date" id="checkin" required>
+    </div>
+    <div>
+      <label for="checkout">Check-out Date:</label>
+      <input type="date" id="checkout" required>
+    </div>
+    <div>
+      <label for="guests">Guests:</label>
+      <select id="guests">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4+</option>
+      </select>
+    </div>
+    <div>
+      <label for="room-type">Room Type:</label>
+      <select id="room-type">
+        <option>Standard</option>
+        <option>Deluxe</option>
+        <option>Suite</option>
+      </select>
+    </div>
+    <button type="submit">Check Availability</button>
+  </form>
+
+  <div id="rooms">
+    <!-- Available rooms will show here -->
+  </div>
+</div>
+
+<script>
+  const rooms = {
+    Standard: { price: 100, description: "Cozy room with essentials." },
+    Deluxe: { price: 150, description: "Spacious room with city view." },
+    Suite: { price: 250, description: "Luxury suite with premium amenities." }
+  };
+
+  document.getElementById('searchForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const roomType = document.getElementById('room-type').value;
+    const roomData = rooms[roomType];
+    const roomsContainer = document.getElementById('rooms');
+
+    roomsContainer.innerHTML = `
+      <div class="room">
+        <h3>${roomType} Room</h3>
+        <p>${roomData.description}</p>
+        <p><strong>Price:</strong> $${roomData.price} / night</p>
+        <button onclick="alert('Room booked!')">Book Now</button>
+      </div>
+    `;
+  });
+</script>
+
+</body>
+</html>
